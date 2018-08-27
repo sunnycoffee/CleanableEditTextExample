@@ -9,6 +9,6 @@ ext {
             groupId       : 'me.coffee.widget',
             artifactId    : 'cleanableedittext',
             desc          : '带清除按钮的输入框',
-            website       : ''
+            website       : 'https://github.com/sunnycoffee/CleanableEditTextExample'
     ]
 }
