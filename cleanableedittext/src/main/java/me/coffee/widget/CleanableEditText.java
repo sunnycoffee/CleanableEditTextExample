@@ -68,7 +68,7 @@ public class CleanableEditText extends android.support.v7.widget.AppCompatEditTe
 
             @Override
             public void afterTextChanged(Editable s) {
-                setCleanButtonVisible(s.length() > 0);
+                setCleanButtonVisible(hasFocus() && s.length() > 0);
             }
         });
     }
