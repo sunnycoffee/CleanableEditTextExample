@@ -45,11 +45,12 @@ public class CleanableEditText extends android.support.v7.widget.AppCompatEditTe
             typedArray.recycle();
         }
         if (cleanButtonResId == -1) cleanButtonResId = R.drawable.ic_cancel_black_24dp;
-        if (cleanButtonTintColor == -1) cleanButtonTintColor = getCurrentHintTextColor();
 
         final Drawable drawable = ContextCompat.getDrawable(context, cleanButtonResId);
         cleanButtonDrawable = DrawableCompat.wrap(drawable);
-        DrawableCompat.setTint(cleanButtonDrawable, cleanButtonTintColor);
+        if (cleanButtonTintColor != -1) {
+            DrawableCompat.setTint(cleanButtonDrawable, cleanButtonTintColor);
+        }
         cleanButtonDrawable.setBounds(0, 0, cleanButtonDrawable.getIntrinsicHeight(), cleanButtonDrawable.getIntrinsicHeight());
         setCleanButtonVisible(false);
 
